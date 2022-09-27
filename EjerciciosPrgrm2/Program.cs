@@ -51,6 +51,7 @@ namespace EjerciciosPrgrm2
             //Console.ReadKey();
 
             #endregion
+
             #region Tercer ejercicio
 
             string palabra;
@@ -70,9 +71,18 @@ namespace EjerciciosPrgrm2
             numero = Convert.ToInt32(Console.ReadLine());
             while (numero != 0)
             {
+                if (numero > Lista.Count())
+                {
+                    Console.WriteLine("No hay datos en esta posicion, ingrese otra posicion");
+                    numero = Convert.ToInt32(Console.ReadLine());
+                }
+                else
+                {
                 numero--;
                 Console.WriteLine(Lista[numero]);
                 numero = Convert.ToInt32(Console.ReadLine());
+                }
+
             }
 
             #endregion
